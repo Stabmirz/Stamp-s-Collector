@@ -317,3 +317,7 @@ section .images {
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
 }
+
+#gif{
+    margin: 100px 10px 100px 420px;
+}
