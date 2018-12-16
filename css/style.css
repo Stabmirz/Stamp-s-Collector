@@ -17,6 +17,7 @@ body {
     background-image: url(../images/bk.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100vh;
     background-attachment: fixed;
     box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.8)
 }
@@ -91,7 +92,7 @@ header .logo:hover {
 }
   
 .wrap input[type=text] {
-    margin-top: 20px;
+    margin-top: 25px;
     font-size: 17px;
     border: none;
 }
@@ -111,7 +112,7 @@ header .logo:hover {
 header ul{
     display:inline;
     float:left;
-    padding-top: 15px;
+    padding-top: 10px;
 }
   
 header ul li{
@@ -151,8 +152,6 @@ section {
     right: 0px;
     bottom: 0px;
     left: 0px;
-    height: 100%;
-    width: 100%;
     padding-top: 60px;
     border-bottom: 1px dotted #D5D5D5;
     padding-bottom: 40px;
