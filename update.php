@@ -16,7 +16,7 @@ include 'partials/aheader.php';
    <form action="updatesubmit.php" method="GET" id ="form">
         Id <br><input type="text" name="id" value="<?php echo $_GET['id'];?>"><br><br>
         Name <br><input type="text" name="name" value="<?php echo $_GET['name'];?>"><br><br>
-        Country <br><input type="text" name="country" value="<?php echo $_GET['country'];?>"><br><br>
+        Country <br><input type="text" name="country_fk" value="<?php echo $_GET['country_fk'];?>"><br><br>
         Year<br><input type="text" name="year" value="<?php echo $_GET['year'];?>"><br><br>
         Size<br><input type="text" name="size" value="<?php echo $_GET['size'];?>"><br><br>
         Stock<br><input type="text" name="count" value="<?php echo $_GET['count'];?>"><br><br>

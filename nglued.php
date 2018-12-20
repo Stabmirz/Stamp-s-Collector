@@ -11,36 +11,38 @@ if ($total!=0){
 ?>
 
 <div class="wrap" id="text">
-    <h2>This is my Album of all my collections that are not glued to Album.</h2>
-        <table>
+    <h1>Collections that are not glued to an Album.</h1>
+    <table class="container">
+        <thead>
             <tr>
-                <th>Name</th>
-                <th>Country</th>
-                <th>Year</th>
-                <th>Size</th>
-                <th>Image</th>
-                <th>Stock</th>
+                <th><h1>Image</h1></th>
+                <th><h1>Name</h1></th>
+                <th><h1>Country</h1></th>
+                <th><h1>Year</h1></th>
+                <th><h1>Size</h1></th>
+                <th><h1>Stock</h1></th>
             </tr>
+        </thead>
 
-            <?php
-            while($result= mysqli_fetch_assoc($data))
-            {
-                echo "<tr>
-                        <td>".$result['name']."</td>
-                        <td>".$result['country']."</td>
-                        <td>".$result['year']."</td>
-                        <td>".$result['size']."</td>
-                        <td><a href='$result[pic_src]'><img src='".$result['pic_src']."'height='100px' width='100px'/></a></td>
-                        <td>".$result['count']."</td>
-                    </tr>";
-            
-            }
-            } else{
-                echo "no record found";
-            }
-            mysqli_close($conn);
-            ?>
-        </table>
-    </section>
+        <?php
+        while($result= mysqli_fetch_assoc($data))
+        {
+            echo "<tbody>
+                <tr>
+                    <td><a href='$result[pic_src]'><img src='".$result['pic_src']."'height='100px' width='100px'/></a></td>
+                    <td>".$result['name']."</td>
+                    <td>".$result['c_name']."</td>
+                    <td>".$result['year']."</td>
+                    <td>".$result['size']."</td>
+                    <td>".$result['count']."</td>
+                </tr>
+            <tbody>";
+        }
+        } else{
+            echo "no record found";
+        }
+        mysqli_close($conn);
+        ?>
+    </table>
 </div>
 <?php include 'partials/footer.php';?>

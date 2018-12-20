@@ -1,6 +1,5 @@
 <?php
 include 'connection.php';
-
 $userprofile =$_SESSION['email'];
 if($userprofile == TRUE) {
 
@@ -8,7 +7,7 @@ if($userprofile == TRUE) {
    header('location:login.php');
 }
 
-$query = "SELECT * FROM STAMP";
+$query = "SELECT * FROM STAMP A JOIN USER B ON A.COLLECTOR_FK=B.A_ID WHERE B.EMAIL='$userprofile' ";
 $data = mysqli_query($conn, $query);
 $total = mysqli_num_rows($data);
 
@@ -17,39 +16,40 @@ if ($total!=0){
 ?>
 
 <div class="wrap" id="text">
-    <section id="album">
-        <h1>Album</h1>
-        <h2>This is my Album of all my collections.</h2>
-        <table>
-
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Country</th>
-                <th>Year</th>
-                <th>Size</th>
-                <th>Image</th>
-                <th>Stock</th>
-                <th>Glued to Album</th>
-                <th colspan="2">Operations</th>
-
-            </tr>
+    <section>
+        <h1>Welcom <?php echo $userprofile?></h1>
+        <table class="container">
+            <thead>
+                <tr>
+                    <th><h1>Id</h1></th>
+                    <th><h1>Image</h1></th>
+                    <th><h1>Name</h1></th>
+                    <th><h1>Country</h1></th>
+                    <th><h1>Year</h1></th>
+                    <th><h1>Size</h1></th>
+                    <th><h1>Glued to Album</h1></th>
+                    <th><h1>Stock</h1></th>
+                    <th colspan="2"><h1 padding="2px">Operations</h1></th>
+                </tr>
+            </thead>
 
             <?php
             while($result= mysqli_fetch_assoc($data))
             {
-                echo "<tr>
+                echo "<tbody>
+                    <tr>
                         <td>".$result['id']."</td>
+                        <td><a href='$result[pic_src]'><img src='".$result['pic_src']."'height='100px' width='100px'/></a></td>
                         <td>".$result['name']."</td>
-                        <td>".$result['country']."</td>
+                        <td>".$result['country_fk']."</td>
                         <td>".$result['year']."</td>
                         <td>".$result['size']."</td>
-                        <td><a href='$result[pic_src]'><img src='".$result['pic_src']."'height='100px' width='100px'/></a></td>
-                        <td>".$result['count']."</td>
                         <td>".$result['glued']."</td>
-                        <td><a href='update.php?id=$result[id]&name=$result[name]&country=$result[country]&year=$result[year]&size=$result[size]&count=$result[count]&glued=$result[glued]'>Edit</a></td>
-                        <td><a href='delete.php?id=$result[id]&name=$result[name]&country=$result[country]&year=$result[year]&size=$result[size]&count=$result[count]&glued=$result[glued]' onclick='return checkdelete()'>Delete</a></td>
-                    </tr>";
+                        <td>".$result['count']."</td>
+                        <td><a href='update.php?id=$result[id]&name=$result[name]&country=$result[country_fk]&year=$result[year]&size=$result[size]&count=$result[count]&glued=$result[glued]'>Edit</a></td>
+                        <td><a href='delete.php?id=$result[id]&name=$result[name]&country=$result[country_fk]&year=$result[year]&size=$result[size]&count=$result[count]&glued=$result[glued]' onclick='return checkdelete()'>Delete</a></td>
+                    </tr>
+                </tbody>";
                     }
                 } else{
                     echo "no record found";

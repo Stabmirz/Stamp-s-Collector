@@ -21,16 +21,12 @@
             <a href="">
                 <div class="entypo-paper-plane logo"></div>
             </a>
-            <a style="text-decoration:none;color:white;margin-top:25px;float:right" href="logout.php">Log Out</a>
             <ul>
                 <a href="index.php">
                     <li>Home</li>
                 </a>
                 <a href="album.php">
                     <li>Album</li>
-                </a>
-                <a href="about.php">
-                    <li>About</li>
                 </a>
                 <div class="dropdown">
                     <a href="#">
@@ -41,14 +37,13 @@
                         <a href="./bangladesh.php">Bangladesh</a>
                         <a href="./switzerland.php">Switzerland</a>
                         <a href="./usa.php">United State</a>
-                        <a href="./england.php">England</a>
+                        <a href="./england.php">United Kingdom</a>
                     </div>
                 </div>
                 <div class="dropdown">
                     <a href="#">
                      <li>Sort By</li>   
                     </a>
-                    
                     <div class="dropdown-content">
                         <a href="./year.php">Year</a>
                         <a href="./count.php">Count</a>
@@ -58,5 +53,10 @@
                 <a href="insert.php">
                     <li>Add Stamps</li>
                 </a>
+                <a href="about.php">
+                    <li>About</li>
+                </a>
             </ul>            
+            <a id = "log" style="margin:30px 50px 0 0;float:right" href="logout.php">Log Out</a>
+        </div>
     </header>

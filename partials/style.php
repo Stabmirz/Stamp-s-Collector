@@ -12,10 +12,10 @@
 body {
     font-family: 'Raleway', sans-serif;
     font-weight: 800;
-    color: Black;
     margin: 0;
     padding: 0;
-    background-color: #000000;
+    line-height: 1.42em;
+    color:black;
     background-image: url(images/bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -24,38 +24,9 @@ body {
 }
 
 
-h1 {
-    font-weight: 200;
-}
-
-h2 {
-    font-weight: 200;
-    width: 50%;
-}
-
-h3 {
-    font-weight: 200;
-}
-
-p {
-    font-weight: 200;
-}
-
-
-::selection {
-    background: #CFA193;
-    /* Safari */
-}
-
-::-moz-selection {
-    background: #CFA193;
-    /* Firefox */
-}
-
 header {
-    background-color: #94c2cf;
-    height: 80px;
-    /* position: fixed; */
+    background-color: crimson;
+    height: 100px;
     margin:0 auto;
     max-width: 80%;
     border-left: 2px dotted #eee;
@@ -65,8 +36,7 @@ header {
 header .logo {
     font-size: 40px;
     color: white;
-    padding: 5px;
-    padding-left: 10px;
+    padding: 30px 0px 0px 70px;
     float: left;
 }
 
@@ -92,7 +62,7 @@ header .logo:hover {
 header ul{
     display:inline;
     float:left;
-    padding-top: 10px;
+    padding-top: 15px;
 }
   
 header ul li{
@@ -103,27 +73,14 @@ header ul li{
   
 header ul a{
     text-decoration:none;
-    
     padding:10px 2px 10px 2px;
-    
-    -webkit-transition: all 500ms ease;
-    -moz-transition: all 500ms ease;
-    -ms-transition: all 500ms ease;
-    -o-transition: all 500ms ease;
-    transition: all 500ms ease;
-    
+    transition: all 500ms ease; 
 }
   
-header ul a:hover, .dropdown-content a:hover{
-    background-color:#88b2be ;
-    padding:10px 20px 10px 20px;
-    
-    -webkit-transition: all 500ms ease;
-    -moz-transition: all 500ms ease;
-    -ms-transition: all 500ms ease;
-     -o-transition: all 500ms ease;
+header ul a:hover, .dropdown-content a:hover, #log:hover{
+    background-color:#2C3446 ;
+    padding:10px 20px 8px 20px;
     transition: all 500ms ease;
-    
 }
 
 
@@ -134,21 +91,6 @@ section {
     left: 0px;
     padding-top: 1px;
     border-bottom: 1px dotted #D5D5D5;
-    padding-bottom: 1px;
-}
-
-section .images {
-    text-align: center;
-
-    transition: all 500ms ease;
-    -moz-transition: all 500ms ease;
-    -ms-transition: all 500ms ease;
-    -o-transition: all 500ms ease;
-    transition: all 500ms ease;
-}
-
-.images img {
-    width: auto;
 }
 
 .wrap {
@@ -161,7 +103,7 @@ section .images {
 }
 
 #form{
-    margin:100px 0px 0px 480px;
+    margin:100px 0px 0px 550px;
 }
 
 .main {
@@ -174,12 +116,6 @@ section .images {
 }
 
 
-#large_image {
-    background-image: url('images/');
-    background-position: center center;
-    min-height: 400px;
-    width: 100%;
-}
 
 #hello {
     padding-top: 100px;
@@ -190,13 +126,13 @@ section .images {
 
 #hello h1 {
     font-weight: 400;
-    color: #0fc5f8;
+    color: crimson;
 }
 
 #hello p {
     width: 50%;
     font-weight: 400;
-    color: #0fc5f8;
+    color: crimson;
     font-size: 16px;
 }
 
@@ -205,11 +141,6 @@ section .images {
     color: white;
 }
 
-
-#new {
-    clear: both;
-    min-height: 500px;
-}
 
 #text {
     padding-top: 100px;
@@ -238,21 +169,12 @@ section .images {
     list-style: none;
     display: inline;
     color: #cccccc;
-
-    transition: all 500ms ease;
-    -moz-transition: all 500ms ease;
-    -ms-transition: all 500ms ease;
-    -o-transition: all 500ms ease;
     transition: all 500ms ease;
 }
 
 #about ul li:hover {
-    color: #94c2cf;
+    color: crimson;
     cursor: pointer;
-    transition: all 500ms ease;
-    -moz-transition: all 500ms ease;
-    -ms-transition: all 500ms ease;
-    -o-transition: all 500ms ease;
     transition: all 500ms ease;
 }
 
@@ -319,9 +241,9 @@ section .images {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #94c2cf;
+    background-color: crimson;
     min-width: 160px;
-    margin-top: 30px;
+    margin-top: 28px;
 }
   
 .dropdown-content a {
@@ -339,64 +261,99 @@ td{
     padding:30px;
 }
 
-/* *,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
-html {
-  box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-}
-
-body {
-    background: -webkit-linear-gradient(to right, #061161, #780206);
-    background: linear-gradient(to right, #061161, #780206);
-}
-
-.albums{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    grid-gap: 10px;
-}
-
-.album{
-    background: rgba(255,255,255,0.3);
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    padding: 0 20px;
-    display: inline-block;
-    grid-template-columns: 150px 1fr;
-    align-items: center;
-    border-radius: 3px;
-}
-
-.album__image{
-    width: 100%;
-    height: 150px;
-    background-color: #cfd4da;
-    border-radius: 2px;
-}
-
-.album__details{
-    padding: 20px;
-    color: #fff;
-}
-
-.album__title{
-    margin-bottom: 0;
+h1 {
+    font-size:3em; 
     font-weight: 300;
+    line-height:1em;
+    text-align: center;
+    color: crimson;
 }
 
-.album__artist{
-    margin: 0;
-    color: #ccc;
-    font-size: .8em;
+h2 {
+    font-size:1em; 
+    font-weight: 300;
+    text-align: center;
+    display: block;
+    line-height:1em;
+    padding-bottom: 2em;
+    color: crimson;
 }
 
-.album__description{
-    font-size: .9em;
-} */
+h2 a {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: crimson;
+    text-decoration: none;
+}
 
+.container th h1 {
+    font-weight: bold;
+    font-size: 1em;
+    text-align: left;
+    color: crimson;
+}
+
+.container td {
+    font-weight: normal;
+    font-size: 1em;
+    box-shadow: 0 2px 2px -2px #0E1119;
+    color:white;
+}
+
+.container {
+    text-align: left;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    display: table;
+    padding: 0 0 8em 0;
+}
+
+.container td, .container th {
+    padding-bottom: 2%;
+    padding-top: 2%;
+    padding-left:2%;  
+}
+
+/* Background-color of the odd rows */
+.container tr:nth-child(odd) {
+    background-color: #323C50;
+}
+
+/* Background-color of the even rows */
+.container tr:nth-child(even) {
+    background-color: #2C3446;
+}
+
+.container th {
+    background-color: #1F2739;
+}
+
+.container td:first-child { color: crimson; }
+
+.container tr:hover {
+    background-color: #464A52;
+    box-shadow: 0 6px 6px -6px #0E1119;
+}
+
+.container td:hover {
+    background-color: crimson;
+    color: white;
+    font-weight: bold;
+    box-shadow: #cdcfd42e -1px 1px, crimson -2px 2px, crimson -3px 3px, crimson -4px 4px, crimson -5px 5px, crimson -6px 6px;
+    transform: translate3d(6px, -6px, 0);
+  
+    transition-delay: 0s;
+    transition-duration: 0.4s;
+    transition-property: all;
+    transition-timing-function: line;
+}
+img{
+    width:200px;
+    height:150px;
+}
+a{
+    color:white;
+    text-decoration:none;
+}
 </style>
