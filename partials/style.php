@@ -9,7 +9,7 @@
     font-family: 'entypo', sans-serif;
 }
 
-/* body {
+body {
     font-family: 'Raleway', sans-serif;
     font-weight: 800;
     color: Black;
@@ -21,7 +21,7 @@
     background-size: cover;
     background-attachment: fixed;
     box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.8);
-} */
+}
 
 
 h1 {
@@ -339,7 +339,7 @@ td{
     padding:30px;
 }
 
-*,
+/* *,
 *:before,
 *:after {
   box-sizing: inherit;
@@ -397,6 +397,6 @@ body {
 
 .album__description{
     font-size: .9em;
-}
+} */
 
 </style>
