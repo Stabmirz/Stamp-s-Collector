@@ -1,3 +1,4 @@
+<style>
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,200);
 
 @import url(http://weloveiconfonts.com/api/?family=entypo);
@@ -8,19 +9,19 @@
     font-family: 'entypo', sans-serif;
 }
 
-body {
+/* body {
     font-family: 'Raleway', sans-serif;
-    font-weight: 200;
-    color: white;
+    font-weight: 800;
+    color: Black;
     margin: 0;
     padding: 0;
-    background-image: url(../images/bk.jpg);
+    background-color: #000000;
+    background-image: url(images/bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
     background-attachment: fixed;
-    box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.8)
-}
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.8);
+} */
 
 
 h1 {
@@ -40,7 +41,6 @@ p {
     font-weight: 200;
 }
 
-/*#a66Ca3*/
 
 ::selection {
     background: #CFA193;
@@ -55,9 +55,11 @@ p {
 header {
     background-color: #94c2cf;
     height: 80px;
-    position: fixed;
-    width: 100%;
-    box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+    /* position: fixed; */
+    margin:0 auto;
+    max-width: 80%;
+    border-left: 2px dotted #eee;
+    border-right: 2px dotted #eee;
 }
 
 header .logo {
@@ -87,28 +89,6 @@ header .logo:hover {
     animation-timing-function: ease-in-out;
 }
 
-.wrap .search-container {
-    float: right;
-}
-  
-.wrap input[type=text] {
-    margin-top: 25px;
-    font-size: 17px;
-    border: none;
-}
-  
-.wrap .search-container button {
-    margin-top: 25px;
-    margin-left: -4px;
-    font-size: 17px;
-    border: none;
-    cursor: pointer;
-}
-  
-.wrap .search-container button:hover {
-    background: #ccc;
-}
-  
 header ul{
     display:inline;
     float:left;
@@ -152,9 +132,9 @@ section {
     right: 0px;
     bottom: 0px;
     left: 0px;
-    padding-top: 60px;
+    padding-top: 1px;
     border-bottom: 1px dotted #D5D5D5;
-    padding-bottom: 40px;
+    padding-bottom: 1px;
 }
 
 section .images {
@@ -172,15 +152,30 @@ section .images {
 }
 
 .wrap {
+    background-color: #FFF;
     max-width: 80%;
-    margin: auto;
-    padding-left: 5px;
-    padding-right: 5px;
+    margin: 0 auto;
+    text-align:left;
+    border-left: 2px dotted #eee;
+    border-right: 2px dotted #eee;
+}
+
+#form{
+    margin:100px 0px 0px 480px;
+}
+
+.main {
+    background-color: #FFF;
+    max-width: 80%;
+    margin: 0 auto;
+    border-left: 2px dotted #eee;
+    border-right: 2px dotted #eee;
+    padding: 1px 0px 1px 0px;
 }
 
 
 #large_image {
-    background-image: url('http://wallpaper.pickywallpapers.com/1280x1024/minimal-flying-paper-plane.jpg');
+    background-image: url('images/');
     background-position: center center;
     min-height: 400px;
     width: 100%;
@@ -266,6 +261,10 @@ section .images {
     background-color: #cccccc;
     color: white;
     text-align: center;
+    max-width:80%;
+    margin:0 auto;
+    border-left: 2px dotted #eee;
+    border-right: 2px dotted #eee;
 }
 
 @keyframes Jumpy {
@@ -319,10 +318,10 @@ section .images {
   
 .dropdown-content {
     display: none;
-    position: fixed;
+    position: absolute;
     background-color: #94c2cf;
     min-width: 160px;
-    margin-top: 10px;
+    margin-top: 30px;
 }
   
 .dropdown-content a {
@@ -332,8 +331,72 @@ section .images {
     display: block;
 }
   
-/* .dropdown-content a:hover {background-color: #94c2cf;} */
-  
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
+td{
+    padding:30px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+body {
+    background: -webkit-linear-gradient(to right, #061161, #780206);
+    background: linear-gradient(to right, #061161, #780206);
+}
+
+.albums{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 10px;
+}
+
+.album{
+    background: rgba(255,255,255,0.3);
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    padding: 0 20px;
+    display: inline-block;
+    grid-template-columns: 150px 1fr;
+    align-items: center;
+    border-radius: 3px;
+}
+
+.album__image{
+    width: 100%;
+    height: 150px;
+    background-color: #cfd4da;
+    border-radius: 2px;
+}
+
+.album__details{
+    padding: 20px;
+    color: #fff;
+}
+
+.album__title{
+    margin-bottom: 0;
+    font-weight: 300;
+}
+
+.album__artist{
+    margin: 0;
+    color: #ccc;
+    font-size: .8em;
+}
+
+.album__description{
+    font-size: .9em;
+}
+
+</style>
