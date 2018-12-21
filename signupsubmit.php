@@ -9,7 +9,7 @@ if(isset($_POST['submit'])){
 
     
     // $sql_u = "SELECT * FROM USER WHERE username='$user'";
-    $sql_e = "SELECT * FROM USER WHERE email='$email'";
+    $sql_e = "SELECT * FROM `user` WHERE email='$email'";
     $res_u = mysqli_query($conn, $sql_u);
     $res_e = mysqli_query($conn, $sql_e);
 

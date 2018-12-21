@@ -14,7 +14,7 @@ if($_GET['submit']){
     // $name = mysql_real_escape_string($name);
 
 
-    $query =  "UPDATE STAMP SET NAME='$name', COUNTRY_FK='$country',YEAR='$year',SIZE='$size', COUNT='$count',GLUED='$glued' WHERE ID='$id'";
+    $query =  "UPDATE stamp SET NAME='$name', country_fk='$country',year='$year',size='$size', count='$count',glued='$glued' WHERE id='$id'";
     $data = mysqli_query($conn, $query);
 
     if($data){

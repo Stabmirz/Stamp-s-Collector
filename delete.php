@@ -3,7 +3,7 @@
  error_reporting(0);
 
 $id=$_GET['id'];
-$query ="DELETE FROM STAMP WHERE ID='$id'";
+$query ="DELETE FROM stamp WHERE id='$id'";
 $data = mysqli_query($conn, $query);
 
 if($data){

@@ -7,7 +7,7 @@ if($userprofile == TRUE) {
    header('location:login.php');
 }
 
-$query = "SELECT * FROM STAMP A JOIN USER B ON A.COLLECTOR_FK=B.A_ID WHERE B.EMAIL='$userprofile' ";
+$query = "SELECT * FROM stamp A JOIN `user` B ON A.collector_fk=B.a_id WHERE B.email='$userprofile' ";
 $data = mysqli_query($conn, $query);
 $total = mysqli_num_rows($data);
 

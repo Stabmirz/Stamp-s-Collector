@@ -2,7 +2,7 @@
 include 'connection.php';
 error_reporting(0);
 
-$query = "SELECT * FROM STAMP WHERE glued='no' ORDER BY YEAR DESC";
+$query = "SELECT * FROM stamp WHERE glued='no' ORDER BY year DESC";
 $data = mysqli_query($conn, $query);
 $total = mysqli_num_rows($data);
 

@@ -2,7 +2,7 @@
 include 'connection.php';
 error_reporting(0);
 
-$query = "SELECT * FROM STAMP A LEFT JOIN USER B ON A.COLLECTOR_FK=B.A_ID LEFT JOIN COUNTRIES C on A.COUNTRY_FK =C.CODE";
+$query = "SELECT * FROM stamp A LEFT JOIN `user` B ON A.collector_fk=B.a_id LEFT JOIN countries C on A.country_fk=C.code";
 $data = mysqli_query($conn, $query);
 $total = mysqli_num_rows($data);
 
