@@ -356,4 +356,22 @@ a{
     color:white;
     text-decoration:none;
 }
+
+
+
+.album{
+    background: rgba(255,255,255,0.3);
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    padding: 0 20px;
+    display: inline-block;
+    margin:30px 0 50px 50px;
+}
+
+.album__image{
+    width: 100%;
+    height: 150px;
+    background-color: #cfd4da;
+    border-radius: 2px;
+}
+
 </style>

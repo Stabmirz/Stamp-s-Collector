@@ -1,16 +1,17 @@
 <?php include 'connection.php';
+   session_start();
 
 if(isset($_POST['submit'])){
-    $name=$_POST['a_name'];
-    $email=$_POST['email'];
-    $pass=$_POST['password'];
+   $name=$_POST['a_name'];
+   $email=$_POST['email'];
+   $pass=$_POST['password'];
 
 
 
     
     // $sql_u = "SELECT * FROM USER WHERE username='$user'";
     $sql_e = "SELECT * FROM `user` WHERE email='$email'";
-    $res_u = mysqli_query($conn, $sql_u);
+    // $res_u = mysqli_query($conn, $sql_u);
     $res_e = mysqli_query($conn, $sql_e);
 
     //check if user already exist
@@ -28,7 +29,7 @@ if(isset($_POST['submit'])){
 
         if($name!="" && $email!="" && $pass!="" ){
 
-            $query = "INSERT INTO USER VALUES ('$id','$name','$email','$pass')";
+            $query = "INSERT INTO `user` VALUES ('$id','$name','$email','$pass')";
             $data = mysqli_query($conn, $query);
             if($data){
             header('location:login.php');

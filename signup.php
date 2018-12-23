@@ -3,8 +3,8 @@ include('partials/header.php')
 ?>
 <div class="main">
     <h1>Sign Up</h1>
-    <form action="signupsubmit.php" method="post" enctype="multipart/form-data" id="form" required>
-        Name*<br><input type="text" name="name" value="" required><br><br>
+    <form action="signupsubmit.php" method="post" id="form" required>
+        Name*<br><input type="text" name="a_name" value="" required><br><br>
         Email*<br><input type="text" name="email" value="" required><br><br>
         Password*<br><input type="password" name="password" id="myInput" value="" required><br><br>
         <input type="checkbox" onclick="myFunction()">Show Password<br><br>

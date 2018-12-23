@@ -1,5 +1,6 @@
 <?php
  include 'connection.php';
+ session_start();
  error_reporting(0);
 
 $id=$_GET['id'];

@@ -3,9 +3,9 @@
     <div class="wrap" id="text">
         <section id="about">
             <h1>About Me</h1>
-            <h3>I am Mirza</h3>
-            <p>I love to collect Stams from all over the world.</p>
-            <img class="me" src="" alt="" />
+            <h2>I am Mirza</h2>
+            <h2>I love to collect Stams from all over the world.</h2>
+            <img class="me" src="images/3Iu3bQV.png" alt="" />
 
             <ul>
                 <li class="entypo-twitter-circled"></li>

@@ -1,10 +1,11 @@
 <?php
 include 'connection.php';
+session_start();
 error_reporting(0);
 if($_GET['submit']){
     $id=$_GET['id'];
     $name=$_GET['name'];
-    $country=$_GET['country_fk'];
+    $country=$_GET['country'];
     $year=$_GET['year'];
     $size=$_GET['size'];
     $count=$_GET['count'];
@@ -14,7 +15,7 @@ if($_GET['submit']){
     // $name = mysql_real_escape_string($name);
 
 
-    $query =  "UPDATE stamp SET NAME='$name', country_fk='$country',year='$year',size='$size', count='$count',glued='$glued' WHERE id='$id'";
+    $query =  "UPDATE stamp SET NAME='$name', country='$country',year='$year',size='$size', count='$count',glued='$glued' WHERE id='$id'";
     $data = mysqli_query($conn, $query);
 
     if($data){

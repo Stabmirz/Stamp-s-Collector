@@ -3,7 +3,6 @@
    $username="root";
    $password="Abi@9001";
    $dbname="collection";
-   session_start();
    $conn = mysqli_connect($servername,$username,$password,$dbname);
    if($conn){
       echo "";

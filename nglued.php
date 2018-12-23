@@ -1,8 +1,9 @@
 <?php
 include 'connection.php';
+session_start();
 error_reporting(0);
 
-$query = "SELECT * FROM stamp WHERE glued='no' ORDER BY year DESC";
+$query = "SELECT * FROM stamp A join countries B on A.country=B.code WHERE glued='no' ORDER BY year DESC";
 $data = mysqli_query($conn, $query);
 $total = mysqli_num_rows($data);
 

@@ -1,7 +1,8 @@
 <?php
  include 'connection.php';
+ session_start();
 error_reporting(0);
-$query = "SELECT * FROM stamp A LEFT JOIN `user` B ON A.collector_fk=B.a_id LEFT JOIN countries C on A.country_fk =C.code ORDER BY count DESC";
+$query = "SELECT * FROM stamp A LEFT JOIN `user` B ON A.collector=B.a_id LEFT JOIN countries C on A.country =C.code ORDER BY count DESC";
 $data = mysqli_query($conn, $query);
 $total = mysqli_num_rows($data);
 

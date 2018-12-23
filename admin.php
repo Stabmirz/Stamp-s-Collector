@@ -1,5 +1,6 @@
 <?php
 include 'connection.php';
+session_start();
 $userprofile =$_SESSION['email'];
 if($userprofile == TRUE) {
 
@@ -7,7 +8,7 @@ if($userprofile == TRUE) {
    header('location:login.php');
 }
 
-$query = "SELECT * FROM stamp A JOIN `user` B ON A.collector_fk=B.a_id WHERE B.email='$userprofile' ";
+$query = "SELECT * FROM stamp A JOIN `user` B ON A.collector=B.a_id WHERE B.email='$userprofile' ";
 $data = mysqli_query($conn, $query);
 $total = mysqli_num_rows($data);
 
@@ -41,13 +42,13 @@ if ($total!=0){
                         <td>".$result['id']."</td>
                         <td><a href='$result[pic_src]'><img src='".$result['pic_src']."'height='100px' width='100px'/></a></td>
                         <td>".$result['name']."</td>
-                        <td>".$result['country_fk']."</td>
+                        <td>".$result['country']."</td>
                         <td>".$result['year']."</td>
                         <td>".$result['size']."</td>
                         <td>".$result['glued']."</td>
                         <td>".$result['count']."</td>
-                        <td><a href='update.php?id=$result[id]&name=$result[name]&country=$result[country_fk]&year=$result[year]&size=$result[size]&count=$result[count]&glued=$result[glued]'>Edit</a></td>
-                        <td><a href='delete.php?id=$result[id]&name=$result[name]&country=$result[country_fk]&year=$result[year]&size=$result[size]&count=$result[count]&glued=$result[glued]' onclick='return checkdelete()'>Delete</a></td>
+                        <td><a href='update.php?id=$result[id]&name=$result[name]&country=$result[country]&year=$result[year]&size=$result[size]&count=$result[count]&glued=$result[glued]'>Edit</a></td>
+                        <td><a href='delete.php?id=$result[id]&name=$result[name]&country=$result[country]&year=$result[year]&size=$result[size]&count=$result[count]&glued=$result[glued]' onclick='return checkdelete()'>Delete</a></td>
                     </tr>
                 </tbody>";
                     }

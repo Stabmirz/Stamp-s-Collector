@@ -1,5 +1,6 @@
 <?php
 include 'connection.php';
+session_start();
 include 'partials/header.php';
 error_reporting(0);?>
 
