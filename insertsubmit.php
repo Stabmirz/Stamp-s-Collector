@@ -16,12 +16,12 @@ if($_POST['submit']){
     move_uploaded_file($tempname,$folder);
 
    if($name!="" && $country!="" && $year!="" && $size!="" && $count!="" && $glued!="" && $filename!=""){
-    $query = "INSERT INTO STAMP VALUES ('0','$name','$country','$year','$size','$folder','$count','$glued','$collector')";
+    $query = "INSERT INTO stamp VALUES ('0','$name','$country','$year','$size','$folder','$count','$glued','$collector')";
        $data = mysqli_query($conn, $query);
 
        if($data){
         echo "<font color='green'>Record Updated Successfuly.";
-        header("Refresh:40; url=admin.php");
+        header("Refresh:0; url=admin.php");
        }
     }else{
        echo "all field are requred";
