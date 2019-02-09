@@ -1,6 +1,5 @@
 <?php
 include 'connection.php';
-session_start();
 $userprofile =$_SESSION['email'];
 if($userprofile == TRUE) {
 
@@ -12,7 +11,7 @@ $query = "SELECT * FROM stamp A JOIN `user` B ON A.collector=B.a_id WHERE B.emai
 $data = mysqli_query($conn, $query);
 $total = mysqli_num_rows($data);
 
-include 'partials/aheader.php';
+include 'partials/header.php';
 if ($total!=0){
 ?>
 

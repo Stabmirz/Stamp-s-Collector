@@ -1,5 +1,6 @@
-<?php include 'partials/header.php';
-include 'connection.php';
+<?php include 'connection.php'; 
+include 'partials/header.php';
+
 ?>
 
     <div class="wrap white">

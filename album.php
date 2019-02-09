@@ -1,6 +1,5 @@
 <?php
 include 'connection.php';
-session_start();
 error_reporting(0);
 
 $query = "SELECT * FROM stamp A LEFT JOIN `user` B ON A.collector=B.a_id LEFT JOIN countries C on A.country=C.code";

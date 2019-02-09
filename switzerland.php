@@ -1,6 +1,5 @@
 <?php
 include 'connection.php';
-session_start();
 error_reporting(0);
 
 $query = "SELECT * FROM stamp A LEFT JOIN `user` B ON A.collector=B.a_id LEFT JOIN countries C on A.country =C.code WHERE A.country='CH'";
@@ -42,7 +41,6 @@ if ($total!=0){
             <tbody>";
         }
         } else{
-            echo "no record found";
         }
         mysqli_close($conn);
         ?>

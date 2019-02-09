@@ -1,6 +1,5 @@
 <?php
 include 'connection.php';
-session_start();
 error_reporting(0);
 
 $userprofile =$_SESSION['email'];
@@ -9,7 +8,7 @@ if($userprofile == TRUE) {
 } else {
    header('location:login.php');
 }
-include 'partials/aheader.php';
+include 'partials/header.php';
 ?>
 
 <div class="main">

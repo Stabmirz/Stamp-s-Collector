@@ -1,6 +1,5 @@
 <?php
 include 'connection.php';
-session_start();
 error_reporting(0);
 
 $query = "SELECT * FROM stamp A join countries B on A.country=B.code WHERE glued='no' ORDER BY year DESC";
@@ -40,7 +39,6 @@ if ($total!=0){
             <tbody>";
         }
         } else{
-            echo "no record found";
         }
         mysqli_close($conn);
         ?>

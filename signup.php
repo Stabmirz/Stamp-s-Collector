@@ -1,6 +1,14 @@
 <?php
-include('partials/header.php')
+include 'connection.php';
+
+//  redirect to admin
+if($_SESSION['email']) {
+    header("Location: admin.php");
+} 
+include 'partials/header.php';
+error_reporting(0);
 ?>
+
 <div class="main">
     <h1>Sign Up</h1>
     <form action="signupsubmit.php" method="post" id="form" required>

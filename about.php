@@ -1,4 +1,7 @@
-<?php include 'partials/header.php';?>
+<?php     include 'connection.php';
+include 'partials/header.php';
+
+?>
 
     <div class="wrap" id="text">
         <section id="about">

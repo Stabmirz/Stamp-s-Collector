@@ -1,8 +1,14 @@
 <?php
 include 'connection.php';
-session_start();
+
+//  redirect to admin
+if($_SESSION['email']) {
+    header("Location: admin.php");
+} 
 include 'partials/header.php';
-error_reporting(0);?>
+error_reporting(0);
+?>
+
 
 <div class="main">
     <h1>Login</h1>

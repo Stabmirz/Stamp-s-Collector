@@ -1,7 +1,7 @@
 <?php
 include 'connection.php';
-session_start();
 error_reporting(0);
+
 if($_GET['submit']){
     $id=$_GET['id'];
     $name=$_GET['name'];
