@@ -1,10 +1,6 @@
 <?php
 include 'connection.php';
 
-//  redirect to admin
-if($_SESSION['email']) {
-    header("Location: admin.php");
-} 
 include 'partials/header.php';
 error_reporting(0);
 ?>
