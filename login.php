@@ -22,7 +22,7 @@ error_reporting(0);
         <input type="checkbox" onclick="myFunction()">Show Password<br><br>
         <input name="login" type="submit" value="Login"/>
     </form>
-    <div id ="form" style="padding-bottom:100px ;">Not a Member? <a style="margin-left: 15px; color:crimson;" href="signup.php">Sign Up</a></div>
+    <div id ="form" style="padding-bottom:100px ;">Not a Member? <a style="margin-left: 15px; color:crimson;" href="signup.php">Signup</a></div>
 </div>
 
 <?php include('partials/footer.php');?>

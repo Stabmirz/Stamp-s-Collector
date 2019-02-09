@@ -14,7 +14,7 @@ error_reporting(0);
         <input type="checkbox" onclick="myFunction()">Show Password<br><br>
         <input type="submit" name="submit" value="Submit">
     </form>
-    <div id ="form" style="padding-bottom:100px ;">Have an account? <a style="margin-left: 15px; color:crimson;" href="login.php">Log In</a></div>
+    <div id ="form" style="padding-bottom:100px ;">Already have an account? <a style="margin-left: 15px; color:crimson;" href="login.php">Login</a></div>
 
 </div>
 <?php include('partials/footer.php');?>
